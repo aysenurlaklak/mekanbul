@@ -1,3 +1,10 @@
+var mongoose = require("mongoose");
+console.log("ENV MONGODB_URI:", process.env.MONGODB_URI);
+
+var dbURI = process.env.MONGODB_URI;
+mongoose.connect(dbURI);
+
+
 var mongoose=require("mongoose");
 var dbURI = process.env.MONGODB_URI;
 //var dbURI="mongodb://localhost/mekanbul";
