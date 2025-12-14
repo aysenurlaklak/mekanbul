@@ -1,34 +1,72 @@
-const database = 'mekanbul';
-use(database);
-db.venues.insertOne(
-{
-  "name": "Barida Cam Kafe",
-  "address": "Süleyman Demirel Üniversitesi",
-  "rating": 5,
-  "foodanddrink": [
-    "çay",
-    "kahve",
-    "pasta"
-  ],
-  "coordinates": [
-    37.83226584629666,
-    30.524732239878013
-  ],
-  "hours": [
-    {
-      "_id": ObjectId(),
-      "days": "Pazartesi-Cuma",
-      "open": "9:00",
-      "close": "23:00",
-      "isClosed": false
-    },
-    {
-      "_id": ObjectId(),
-      "days": "Cumartesi-Pazar",
-      "open": "11:00",
-      "close": "17:00",
-      "isClosed": false
-    }
-  ]
-}
- );
+[
+  {
+    name: "Kahve Durağı",
+    address: "İstiklal Cad. No: 15, Beyoğlu, İstanbul",
+    rating: 4.5,
+    foodanddrink: ["Kahve", "Tatlı", "Sandviç"],
+    coordinates: [28.97953, 41.03609], // [boylam, enlem]
+    hours: [
+      { day: "Pazartesi - Cuma", open: "08:00", close: "22:00", isClosed: false },
+      { day: "Cumartesi", open: "09:00", close: "23:00", isClosed: false },
+      { day: "Pazar", open: "10:00", close: "21:00", isClosed: false }
+    ],
+    comments: [
+      { author: "Ayşe Yılmaz", rating: 5, text: "Harika kahveler ve güler yüzlü personel!", date: new Date("2025-10-01T10:30:00Z") },
+      { author: "Mehmet Demir", rating: 4, text: "Atmosfer güzel ama hafta sonları çok kalabalık.", date: new Date("2025-10-15T14:45:00Z") }
+    ]
+  },
+  {
+    name: "Tarihi Köfteci",
+    address: "Ankara Cad. No: 42, Sultanahmet, İstanbul",
+    rating: 4.8,
+    foodanddrink: ["Köfte", "Piyaz", "İçecekler"],
+    coordinates: [28.98188, 41.00823],
+    hours: [
+      { day: "Pazartesi - Cumartesi", open: "11:00", close: "20:00", isClosed: false },
+      { day: "Pazar", open: "0", close: "0", isClosed: true }
+    ],
+    comments: [
+      { author: "Fatma Öztürk", rating: 5, text: "İstanbul'daki en iyi köfte!", date: new Date("2025-09-20T19:00:00Z") }
+    ]
+  },
+  {
+    name: "Deniz Manzaralı Balık Restoranı",
+    address: "Sahil Yolu No: 7, Moda, Kadıköy",
+    rating: 4.2,
+    foodanddrink: ["Balık", "Meze", "Deniz Ürünleri"],
+    coordinates: [29.02705, 40.98592],
+    hours: [
+      { day: "Her Gün", open: "12:00", close: "00:00", isClosed: false }
+    ],
+    comments: [
+      { author: "Ali Kaya", rating: 4, text: "Manzara harika, fiyatlar biraz yüksek.", date: new Date("2025-11-05T21:15:00Z") },
+      { author: "Zeynep Çelik", rating: 5, text: "Taze balık ve kaliteli hizmet.", date: new Date("2025-11-20T18:30:00Z") },
+    ]
+  },
+  {
+    name: "Kitap Kafe",
+    address: "Eğitim Mah. Sokak No: 3, Beşiktaş, İstanbul",
+    rating: 3.9,
+    foodanddrink: ["Çay", "Kahve", "Kek"],
+    coordinates: [29.00693, 41.04351],
+    hours: [
+      { day: "Hafta İçi", open: "09:30", close: "21:00", isClosed: false },
+      { day: "Hafta Sonu", open: "10:00", close: "20:00", isClosed: false }
+    ],
+    comments: [
+      { author: "Caner Ekinci", rating: 3, text: "Kitap seçkisi iyi ama servis yavaş.", date: new Date("2025-12-01T16:00:00Z") }
+    ]
+  },
+  {
+    name: "Hızlı Pide Fırını",
+    address: "Sanayi Bölgesi, No: 10, Ataşehir, İstanbul",
+    rating: 4.0,
+    foodanddrink: ["Pide", "Lahmacun", "Ayran"],
+    coordinates: [29.11714, 40.98402],
+    hours: [
+      { day: "Pazartesi - Cumartesi", open: "07:00", close: "18:00", isClosed: false },
+      { day: "Pazar", open: "0", close: "0", isClosed: true }
+    ],
+    comments: [] // Henüz yorum yok
+  }
+]
